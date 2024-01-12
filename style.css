@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    color: gold;
+}
+.draggableContainer{
+    border: 1px solid salmon;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.droppableContainer{
+    border: 1px solid burlywood;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.box{
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width:120px ;
+    margin-right: 5px;
+    cursor: grab;
+}
+.droppable{
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width:150px ;
+    margin-right: 5px;
+}
+.draggableFormat{
+    font-weight: bold;
+    color: darkorange;
+    border: 5px dotted gray;
+}

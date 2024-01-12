@@ -1,0 +1,196 @@
+<html>
+
+<style>
+  table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .rcorners {
+    border-radius: 25px;
+    background: #3498db;  /* New color: a shade of blue */
+    width: 140px;
+    height: 120px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rcorners2 {
+    border-radius: 25px;
+    background: #e74c3c;  /* New color: a shade of red */
+    padding: 0px;
+    width: 140px;
+    height: 120px;
+  }
+</style>
+
+
+<script>
+
+function allowDrop(ev) {
+
+  ev.preventDefault();
+
+}
+
+
+
+function drag(ev) {
+
+  ev.dataTransfer.setData("text", ev.target.id);
+
+}
+
+
+
+function drop(ev) {
+
+  ev.preventDefault();
+
+  var data = ev.dataTransfer.getData("text");
+
+   ev.target.appendChild(document.getElementById(data));
+
+}
+
+</script>
+
+<table>
+
+
+
+	<tr>
+
+		<td><div class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)">
+
+				<img src="mouth.jpg" id="drag1" draggable="true" ondragstart ="drag(event)" class="rcorners"></img>
+
+			</div>
+
+		</td>
+
+		<td width="200px" align="right">
+
+			<div id="drop1" class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+
+		</td>
+
+		<td>
+
+			<div class="rcorners">EARS</div>
+
+		</td>
+
+	</tr>
+
+
+
+
+
+	<tr>
+
+		<td><div class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)">
+
+				<img src="ears.jpg" id="drag2" draggable="true" ondragstart ="drag(event)" class="rcorners"></img>
+
+			</div>
+
+		</td>
+
+		<td width="200px" align="right">
+
+			<div id="drop2" class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+
+		</td>
+
+		<td>
+
+			<div class="rcorners">EYES</div>
+
+		</td>
+
+	</tr>
+
+	<tr>
+
+		<td><div class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)">
+
+				<img src="eyes.jpg" id="drag3" draggable="true" ondragstart ="drag(event)" class="rcorners"></img>
+
+			</div>
+
+		</td>
+
+		<td width="200px" align="right">
+
+			<div id="drop3" class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+
+		</td>
+
+		<td>
+
+			<div class="rcorners">MOUTH</div>
+
+		</td>
+
+	</tr>
+
+	<tr>
+
+		<td><div class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)">
+
+				<img src="chin.jpg" id="drag4" draggable="true" ondragstart ="drag(event)" class="rcorners"></img>
+
+			</div>
+
+		</td>
+
+		<td width="200px" align="right">
+
+			<div id="drop4" class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+
+		</td>
+
+		<td>
+
+			<div class="rcorners">NOSE</div>
+
+		</td>
+
+	</tr>
+
+	<tr>
+
+		<td><div class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)">
+
+				<img src="nose.jpg" id="drag5" draggable="true" ondragstart ="drag(event)" class="rcorners"></img>
+
+			</div>
+
+		</td>
+
+		<td width="200px" align="right">
+
+			<div id="drop5" class="rcorners2" ondrop="drop(event)"  ondragover="allowDrop(event)"></div>
+
+		</td>
+
+		<td>
+
+			<div class="rcorners">CHIN</div>
+
+		</td>
+
+	</tr>
+
+
+
+</table>
+
+
+
+</html>
